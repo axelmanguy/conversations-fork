@@ -531,7 +531,7 @@ class AIAgentService:  # pylint: disable=too-many-instance-attributes
 
         async with AsyncExitStack() as stack:
             # MCP servers (if any) can be initialized here
-            mcp_servers = [await stack.enter_async_context(mcp) for mcp in get_mcp_servers()]
+            mcp_servers = [await stack.enter_async_context(mcp) for mcp in get_mcp_servers(user=self.user)]
 
             _final_output_from_tool = None
             _ui_sources = []

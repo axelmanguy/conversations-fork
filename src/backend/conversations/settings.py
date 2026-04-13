@@ -900,6 +900,13 @@ USER QUESTION:
         environ_prefix=None,
     )
 
+    # Data Education API (Huwise)
+    DATA_EDUCATION_API_KEY = values.Value(
+        None,
+        environ_name="DATA_EDUCATION_API_KEY",
+        environ_prefix=None,
+    )
+
     # Albert API
     ALBERT_API_KEY = values.Value(
         None,  # Albert API key is not set by default

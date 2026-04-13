@@ -163,6 +163,14 @@ class User(AbstractBaseUser, BaseModel, auth_models.PermissionsMixin):
         help_text=_("Whether the user allows to use their conversations for analytics."),
     )
 
+    data_education_api_key = models.CharField(
+        _("Data Education API Key"),
+        max_length=255,
+        blank=True,
+        null=True,
+        help_text=_("User's personal API key for the Data Education (Huwise) MCP integration."),
+    )
+
     objects = UserManager()
 
     USERNAME_FIELD = "admin_email"

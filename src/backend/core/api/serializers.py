@@ -13,6 +13,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "allow_conversation_analytics",
+            "data_education_api_key",
             "email",
             "full_name",
             "short_name",
